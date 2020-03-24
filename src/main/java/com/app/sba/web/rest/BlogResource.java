@@ -91,6 +91,7 @@ public class BlogResource {
     public List<Blog> getAllBlogs() {
         log.debug("REST request to get all Blogs");
         return blogRepository.findByUserIsCurrentUser();
+
     }
 
     /**
