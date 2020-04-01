@@ -1,10 +1,31 @@
-<div style="width: 40%;">
-    <canvas
-        baseChart
-        [chartType]="'line'"
-        [datasets]="chartData"
-        [labels]="chartLabels"
-        [options]="chartOptions"
-        [legend]="true">
-    </canvas>
-</div>
+
+
+
+    <div class="col-xs-6" style="width: 40%;">
+        <canvas
+            baseChart
+            [chartType]="'pie'"
+            [datasets]="chartDataPie"
+            [labels]="chartLabelsPie"
+            [options]="chartOptions"
+            [legend]="true">
+        </canvas>
+    </div>
+
+
+
+
+/**
+    <div  class="row" >
+        <div class="col-xs-6" style="width: 40%;">
+            <canvas
+                baseChart
+                [chartType]="'line'"
+                [datasets]="chartDataLine"
+                [labels]="chartLabelsLine"
+                [options]="chartOptions"
+                [legend]="true">
+            </canvas>
+        </div>
+    </div>
+*/
