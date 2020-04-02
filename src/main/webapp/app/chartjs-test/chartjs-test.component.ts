@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PieService } from 'app/core/pie_chartjs/pie.service';
 import * as log from 'loglevel';
-import { repeat } from 'rxjs/operators';
 
 @Component({
   selector: 'jhi-chartjs-test',
@@ -10,10 +9,10 @@ import { repeat } from 'rxjs/operators';
 })
 export class ChartjsTestComponent implements OnInit {
   dataResponse: any = [];
-  pie_data: any = [];
-  pie_labels: any = [];
-  chartDataPie: any = [];
-  chartLabelsPie: any = [];
+  pie_data?: any = [];
+  pie_labels?: any = [];
+  chartDataPie?: any = [];
+  chartLabelsPie?: any = [];
   chartOptions = {
     responsive: true
   };

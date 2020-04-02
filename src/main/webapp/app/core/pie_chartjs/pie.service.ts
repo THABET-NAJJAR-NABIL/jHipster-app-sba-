@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-import { SERVER_API_URL } from 'app/app.constants';
 import { IPie } from 'app/core/pie_chartjs/pie.model';
 
 @Injectable({ providedIn: 'root' })
