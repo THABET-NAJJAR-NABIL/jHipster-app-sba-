@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { PieService } from 'app/core/pie_chartjs/pie.service';
 import * as log from 'loglevel';
 
@@ -7,30 +7,30 @@ import * as log from 'loglevel';
   templateUrl: './chartjs-test.component.html',
   styleUrls: ['./chartjs-test.component.scss']
 })
-export class ChartjsTestComponent implements OnInit {
+export class ChartjsTestComponent implements OnInit, AfterContentInit {
   dataResponse: any = [];
-  pie_data?: any = [];
-  pie_labels?: any = [];
-  chartDataPie?: any = [];
-  chartLabelsPie?: any = [];
+  pie_data: any = [];
+  pie_labels: any = [];
+  chartDataPie = [{ data: [], label: '' }];
+  chartLabelsPie: any = [];
   chartOptions = {
     responsive: true
   };
 
-  chartDataLine = [
-    { data: [330, 600, 260, 700], label: 'Account A' },
-    { data: [120, 455, 100, 340], label: 'Account B' },
-    { data: [45, 67, 800, 500], label: 'Account C' }
-  ];
-
-  chartLabelsLine = ['January', 'February', 'Mars', 'April'];
-
   constructor(private pieService: PieService) {}
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.getPieDataFromServer();
+    }, 5000);
+  }
+
+  getPieDataFromServer(): void {
     this.pieService.getAll().subscribe(
       response => {
         this.dataResponse = response;
+        this.pie_data.length = 0;
+        this.pie_labels.length = 0;
         for (let i = 0; i < this.dataResponse.length; i++) {
           this.pie_data.push(this.dataResponse[i].quantity);
           this.pie_labels.push(this.dataResponse[i].label);
@@ -43,4 +43,6 @@ export class ChartjsTestComponent implements OnInit {
       }
     );
   }
+
+  ngAfterContentInit(): void {}
 }
