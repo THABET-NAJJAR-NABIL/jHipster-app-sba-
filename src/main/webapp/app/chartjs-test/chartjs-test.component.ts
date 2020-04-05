@@ -1,13 +1,14 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PieService } from 'app/core/pie_chartjs/pie.service';
 import * as log from 'loglevel';
+import { WebSocketAPI } from '../WebSocketAPI';
 
 @Component({
   selector: 'jhi-chartjs-test',
   templateUrl: './chartjs-test.component.html',
   styleUrls: ['./chartjs-test.component.scss']
 })
-export class ChartjsTestComponent implements OnInit, AfterContentInit {
+export class ChartjsTestComponent implements OnInit {
   dataResponse: any = [];
   pie_data: any = [];
   pie_labels: any = [];
@@ -17,12 +18,15 @@ export class ChartjsTestComponent implements OnInit, AfterContentInit {
     responsive: true
   };
 
+  webSocketAPI: WebSocketAPI | undefined;
+  greeting: any;
+  name = '';
+
   constructor(private pieService: PieService) {}
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.getPieDataFromServer();
-    }, 5000);
+    // setInterval(() => {this.getPieDataFromServer();}, 5000);
+    this.webSocketAPI = new WebSocketAPI();
   }
 
   getPieDataFromServer(): void {
@@ -43,6 +47,22 @@ export class ChartjsTestComponent implements OnInit, AfterContentInit {
       }
     );
   }
+  connect(): void {
+    // @ts-ignore
+    this.webSocketAPI._connect();
+  }
 
-  ngAfterContentInit(): void {}
+  disconnect(): void {
+    // @ts-ignore
+    this.webSocketAPI._disconnect();
+  }
+
+  sendMessage(): void {
+    // @ts-ignore
+    this.webSocketAPI._send(this.name);
+  }
+
+  handleMessage(message: any): void {
+    this.greeting = message;
+  }
 }

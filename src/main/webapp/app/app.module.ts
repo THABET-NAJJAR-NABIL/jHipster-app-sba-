@@ -8,6 +8,7 @@ import { JhipsterAppRoutingModule } from './app-routing.module';
 import { JhipsterHomeModule } from './home/home.module';
 import { JhipsterEntityModule } from './entities/entity.module';
 import { ChartsModule } from 'ng2-charts';
+
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
