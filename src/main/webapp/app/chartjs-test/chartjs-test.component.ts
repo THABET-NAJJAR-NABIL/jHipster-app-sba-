@@ -17,6 +17,7 @@ export class ChartjsTestComponent implements OnInit {
   chartOptions = {
     responsive: true
   };
+  // test
   
   
   
