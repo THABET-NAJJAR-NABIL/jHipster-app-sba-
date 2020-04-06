@@ -17,11 +17,7 @@ export class ChartjsTestComponent implements OnInit {
   chartOptions = {
     responsive: true
   };
-  
-  
-  
-  
-  
+  // hello
 
   webSocketAPI: WebSocketAPI | undefined;
   greeting: any;
