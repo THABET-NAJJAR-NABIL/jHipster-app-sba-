@@ -62,7 +62,7 @@ export class ChartjsTestComponent implements OnInit {
     this.webSocketAPI._send(this.name);
   }
 
-  // hello
+  // hello feature_1
   handleMessage(message: any): void {
     this.greeting = message;
   }
