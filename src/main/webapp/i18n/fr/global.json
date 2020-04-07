@@ -11,6 +11,7 @@
         "blog": "Blog",
         "entry": "Entry",
         "tag": "Tag",
+        "book": "Book",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
