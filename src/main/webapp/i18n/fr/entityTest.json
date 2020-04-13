@@ -1,0 +1,22 @@
+{
+  "jhipsterApp": {
+    "entityTest": {
+      "home": {
+        "title": "EntityTests",
+        "createLabel": "Créer un nouveau Entity Test",
+        "createOrEditLabel": "Créer ou éditer un Entity Test",
+        "notFound": "Aucun Entity Test trouvé"
+      },
+      "created": "Un nouveau Entity Test a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Entity Test avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Entity Test avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Entity Test {{ id }} ?"
+      },
+      "detail": {
+        "title": "Entity Test"
+      },
+      "test": "Test"
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { Authority } from 'app/shared/constants/authority.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
-import { ChartjsTestComponent } from 'app/chartjs-test/chartjs-test.component';
+import { ChartTestComponent } from 'app/chart-test/chart-test.component';
 
 const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
@@ -28,7 +28,7 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
         },
         {
           path: 'chartjs',
-          component: ChartjsTestComponent
+          component: ChartTestComponent
         },
         ...LAYOUT_ROUTES
       ],

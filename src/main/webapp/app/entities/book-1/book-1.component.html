@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterApp.book1.home.title">Book 1 S</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-book-1" [routerLink]="['/book-1/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="jhipsterApp.book1.home.createLabel">
+            Create a new Book 1
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="book1S?.length === 0">
+        <span jhiTranslate="jhipsterApp.book1.home.notFound">No book1S found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="book1S?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.book1.isbn">Isbn</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.book1.title">Title</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterApp.book1.description">Description</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book1 of book1S ;trackBy: trackId">
+                    <td><a [routerLink]="['/book-1', book1.id, 'view']">{{ book1.id }}</a></td>
+                    <td>{{ book1.isbn }}</td>
+                    <td>{{ book1.title }}</td>
+                    <td>{{ book1.description }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/book-1', book1.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/book-1', book1.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(book1)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+
+<div fxLayout="row" fxLayoutAlign="space-around center" >
+    <div>
+        <h2>HELLO 1 </h2>
+    </div>
+    <div>
+        <h2>HELLO 2 </h2>
+    </div>
+    <div>
+        <h2>HELLO 3 </h2>
+    </div>
+
+</div>
+
+
+<div class="col-xs-6" style="width: 40%;">
+    <canvas
+        baseChart
+        [chartType]="'pie'"
+        [datasets]="chartDataPie"
+        [labels]="chartLabelsPie"
+        [options]="chartOptions"
+        [legend]="true">
+    </canvas>
+</div>
+

@@ -1,0 +1,23 @@
+{
+  "jhipsterApp": {
+    "pieModel": {
+      "home": {
+        "title": "PieModels",
+        "createLabel": "Créer un nouveau Pie Model",
+        "createOrEditLabel": "Créer ou éditer un Pie Model",
+        "notFound": "Aucun Pie Model trouvé"
+      },
+      "created": "Un nouveau Pie Model a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pie Model avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pie Model avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Pie Model {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pie Model"
+      },
+      "quantity": "Quantity",
+      "label": "Label"
+    }
+  }
+}

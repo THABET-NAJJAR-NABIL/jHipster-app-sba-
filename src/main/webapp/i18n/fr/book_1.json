@@ -1,0 +1,24 @@
+{
+  "jhipsterApp": {
+    "book_1": {
+      "home": {
+        "title": "Book_1S",
+        "createLabel": "Créer un nouveau Book 1",
+        "createOrEditLabel": "Créer ou éditer un Book 1",
+        "notFound": "Aucun Book 1 trouvé"
+      },
+      "created": "Un nouveau Book 1 a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Book 1 avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Book 1 avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Book 1 {{ id }} ?"
+      },
+      "detail": {
+        "title": "Book 1"
+      },
+      "isbn": "Isbn",
+      "title": "Title",
+      "description": "Description"
+    }
+  }
+}

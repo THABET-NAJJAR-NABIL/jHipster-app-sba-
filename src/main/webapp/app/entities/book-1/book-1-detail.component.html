@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="book1">
+            <h2><span jhiTranslate="jhipsterApp.book1.detail.title">Book 1</span> {{ book1.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterApp.book1.isbn">Isbn</span></dt>
+                <dd>
+                    <span>{{ book1.isbn }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.book1.title">Title</span></dt>
+                <dd>
+                    <span>{{ book1.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.book1.description">Description</span></dt>
+                <dd>
+                    <span>{{ book1.description }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/book-1', book1.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

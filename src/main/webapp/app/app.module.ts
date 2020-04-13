@@ -16,7 +16,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
-import { ChartjsTestComponent } from './chartjs-test/chartjs-test.component';
+import { ChartTestComponent } from './chart-test/chart-test.component';
 
 @NgModule({
   imports: [
@@ -36,7 +36,7 @@ import { ChartjsTestComponent } from './chartjs-test/chartjs-test.component';
     PageRibbonComponent,
     ActiveMenuDirective,
     FooterComponent,
-    ChartjsTestComponent
+    ChartTestComponent
   ],
   bootstrap: [MainComponent]
 })

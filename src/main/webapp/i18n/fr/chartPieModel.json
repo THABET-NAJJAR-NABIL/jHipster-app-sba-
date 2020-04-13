@@ -1,0 +1,23 @@
+{
+  "jhipsterApp": {
+    "chartPieModel": {
+      "home": {
+        "title": "ChartPieModels",
+        "createLabel": "Créer un nouveau Chart Pie Model",
+        "createOrEditLabel": "Créer ou éditer un Chart Pie Model",
+        "notFound": "Aucun Chart Pie Model trouvé"
+      },
+      "created": "Un nouveau Chart Pie Model a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Chart Pie Model avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Chart Pie Model avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Chart Pie Model {{ id }} ?"
+      },
+      "detail": {
+        "title": "Chart Pie Model"
+      },
+      "quantity": "Quantity",
+      "lable": "Lable"
+    }
+  }
+}

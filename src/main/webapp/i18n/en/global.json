@@ -12,6 +12,9 @@
         "entry": "Entry",
         "tag": "Tag",
         "book": "Book",
+        "entityTest": "Entity Test",
+        "pieModel": "Pie Model",
+        "chartPieModel": "Chart Pie Model",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

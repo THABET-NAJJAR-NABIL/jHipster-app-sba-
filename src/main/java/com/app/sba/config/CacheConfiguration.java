@@ -28,12 +28,6 @@ public class CacheConfiguration {
                 .withExpiry(ExpiryPolicyBuilder.timeToLiveExpiration(Duration.ofSeconds(ehcache.getTimeToLiveSeconds())))
                 .build());
     }
-
-    @Bean
-    public HibernatePropertiesCustomizer hibernatePropertiesCustomizer(javax.cache.CacheManager cacheManager) {
-        return hibernateProperties -> hibernateProperties.put(ConfigSettings.CACHE_MANAGER, cacheManager);
-    }
-
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
@@ -48,6 +42,7 @@ public class CacheConfiguration {
             createCache(cm, com.app.sba.domain.Tag.class.getName());
             createCache(cm, com.app.sba.domain.Tag.class.getName() + ".entries");
             createCache(cm, com.app.sba.domain.Book.class.getName());
+            createCache(cm, com.app.sba.domain.ChartPieModel.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

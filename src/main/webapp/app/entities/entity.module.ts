@@ -19,6 +19,18 @@ import { RouterModule } from '@angular/router';
       {
         path: 'book',
         loadChildren: () => import('./book/book.module').then(m => m.JhipsterBookModule)
+      },
+      {
+        path: 'entity-test',
+        loadChildren: () => import('./entity-test/entity-test.module').then(m => m.JhipsterEntityTestModule)
+      },
+      {
+        path: 'pie-model',
+        loadChildren: () => import('./pie-model/pie-model.module').then(m => m.JhipsterPieModelModule)
+      },
+      {
+        path: 'chart-pie-model',
+        loadChildren: () => import('./chart-pie-model/chart-pie-model.module').then(m => m.JhipsterChartPieModelModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
