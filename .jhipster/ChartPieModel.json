@@ -5,7 +5,7 @@
     "fields": [
         {
             "fieldName": "quantity",
-            "fieldType": "Integer",
+            "fieldType": "Double",
             "fieldValidateRules": [
                 "required"
             ]

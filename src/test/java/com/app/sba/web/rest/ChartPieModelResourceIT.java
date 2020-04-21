@@ -30,8 +30,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class ChartPieModelResourceIT {
 
-    private static final Integer DEFAULT_QUANTITY = 1;
-    private static final Integer UPDATED_QUANTITY = 2;
+    private static final Double DEFAULT_QUANTITY = 1D;
+    private static final Double UPDATED_QUANTITY = 2D;
 
     private static final String DEFAULT_LABLE = "AAAAAAAAAA";
     private static final String UPDATED_LABLE = "BBBBBBBBBB";
@@ -163,7 +163,7 @@ public class ChartPieModelResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(chartPieModel.getId().intValue())))
-            .andExpect(jsonPath("$.[*].quantity").value(hasItem(DEFAULT_QUANTITY)))
+            .andExpect(jsonPath("$.[*].quantity").value(hasItem(DEFAULT_QUANTITY.doubleValue())))
             .andExpect(jsonPath("$.[*].lable").value(hasItem(DEFAULT_LABLE)));
     }
     
@@ -178,7 +178,7 @@ public class ChartPieModelResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(chartPieModel.getId().intValue()))
-            .andExpect(jsonPath("$.quantity").value(DEFAULT_QUANTITY))
+            .andExpect(jsonPath("$.quantity").value(DEFAULT_QUANTITY.doubleValue()))
             .andExpect(jsonPath("$.lable").value(DEFAULT_LABLE));
     }
 

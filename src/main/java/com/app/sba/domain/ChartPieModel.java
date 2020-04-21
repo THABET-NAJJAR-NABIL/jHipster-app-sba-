@@ -26,7 +26,7 @@ public class ChartPieModel implements Serializable {
 
     @NotNull
     @Column(name = "quantity", nullable = false)
-    private Integer quantity;
+    private Double quantity;
 
     @NotNull
     @Column(name = "lable", nullable = false)
@@ -41,16 +41,16 @@ public class ChartPieModel implements Serializable {
         this.id = id;
     }
 
-    public Integer getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public ChartPieModel quantity(Integer quantity) {
+    public ChartPieModel quantity(Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 
